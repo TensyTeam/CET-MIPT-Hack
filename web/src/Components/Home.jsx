@@ -19,10 +19,10 @@ class Home extends React.Component {
 			const X = [];
 			const Y = [];
 			const Z = [];
-			for (let m = 0; m < _eventGetCSV.length; m += 1) {
-				X.push(_eventGetCSV[m].x);
-				Y.push(_eventGetCSV[m].y);
-				Z.push(_eventGetCSV[m].z);
+			for (let m = 0; m < _eventGetCSV.result.length; m += 1) {
+				X.push(_eventGetCSV.result[m].x);
+				Y.push(_eventGetCSV.result[m].y);
+				Z.push(_eventGetCSV.result[m].z);
 			}
 			localStorage.setItem('CSV_x', JSON.stringify(X));
 			localStorage.setItem('CSV_y', JSON.stringify(Y));
