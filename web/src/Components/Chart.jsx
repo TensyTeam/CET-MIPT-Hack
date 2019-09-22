@@ -20,17 +20,26 @@ class Chart extends React.Component {
 				},
 				{
 					alphahull: 10,
-					opacity: 0.8,
-					color: '#dadada',
+					opacity: 0.5,
+					color: '#2ecc71',
 					type: 'mesh3d',
 					x: JSON.parse(localStorage.getItem('CSV_x')),
 					y: JSON.parse(localStorage.getItem('CSV_y')),
 					z: JSON.parse(localStorage.getItem('CSV_z')),
 				},
+				{
+					alphahull: 12,
+					opacity: 0.5,
+					color: '#f1c40f',
+					type: 'mesh3d',
+					x: JSON.parse(localStorage.getItem('CSV_x_plus')),
+					y: JSON.parse(localStorage.getItem('CSV_y_plus')),
+					z: JSON.parse(localStorage.getItem('CSV_z_plus')),
+				},
 			],
 			layout: {
 				autosize: true,
-				title: 'Схема',
+				title: '',
 				width: 788,
 				height: 788,
 				scene: {
@@ -70,23 +79,24 @@ class Chart extends React.Component {
 					},
 				},
 			},
+			value: '123',
 		};
 	}
 
-	// componentWillMount() {
-		// JSON.parse(localStorage.getItem('CSV_x'));
-		// JSON.parse(localStorage.getItem('CSV_y'));
-		// JSON.parse(localStorage.getItem('CSV_z'));
-	// }
-
 	render() {
-		const { data, layout } = this.state;
+		const { data, layout, value } = this.state;
 		return (
-			<div>
+			<div className="module">
 				<Plot
 					data={data}
 					layout={layout}
 				/>
+				<div className="value_block">
+					<div className="gradient gradient_hot">
+						VALUE =
+						{` ${value}`}
+					</div>
+				</div>
 			</div>
 		);
 	}

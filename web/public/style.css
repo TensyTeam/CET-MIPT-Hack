@@ -53,3 +53,31 @@ body {
     position: absolute;
     z-index: -1;
 }
+
+.value_block {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.module {
+    display: flex;
+    align-items: center;
+}
+
+.gradient {
+    font-size: 34px;
+    font-weight: bold;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    position: relative;
+}
+
+.gradient_hot {
+    background-image: linear-gradient(30deg, #fe6786, #e89253);
+}
+
+.modebar {
+    display: none;
+}
