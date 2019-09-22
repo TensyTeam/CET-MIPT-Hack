@@ -5,6 +5,7 @@ import {
 
 import Home from './Components/Home.jsx';
 import Popup from './Components/Popup.jsx';
+import Chart from './Components/Chart.jsx';
 
 export default class App extends React.Component {
 	constructor(props) {
@@ -51,6 +52,13 @@ export default class App extends React.Component {
 					)}
 					<Route exact path="/">
 						<Home
+							showPopup={showPopup}
+							onPopup={this.onPopup}
+							onRedirect={this.onRedirect}
+						/>
+					</Route>
+					<Route exact path="/chart">
+						<Chart
 							showPopup={showPopup}
 							onPopup={this.onPopup}
 							onRedirect={this.onRedirect}
