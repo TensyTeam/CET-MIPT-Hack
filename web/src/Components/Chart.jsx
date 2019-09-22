@@ -28,7 +28,7 @@ class Chart extends React.Component {
 					z: JSON.parse(localStorage.getItem('CSV_z')),
 				},
 				{
-					alphahull: 15,
+					alphahull: 12,
 					opacity: 0.5,
 					color: '#f1c40f',
 					type: 'mesh3d',
