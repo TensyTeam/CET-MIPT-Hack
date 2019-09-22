@@ -1,0 +1,6 @@
+data/
+
+*.csv
+*.txt
+
+txt2csv.py
