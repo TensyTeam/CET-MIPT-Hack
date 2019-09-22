@@ -56,8 +56,8 @@ class Home extends React.Component {
 		localStorage.setItem('CSV_x_plus', JSON.stringify(X));
 		localStorage.setItem('CSV_y_plus', JSON.stringify(Y));
 		localStorage.setItem('CSV_z_plus', JSON.stringify(Z));
-		localStorage.setItem('similar', JSON.stringify('...'));
-		localStorage.setItem('huevye', JSON.stringify('...'));
+		localStorage.setItem('similar', JSON.stringify([8, 11, 17]));
+		localStorage.setItem('huevye', JSON.stringify([14, 18]));
 		onRedirect('/chart');
 	}
 
