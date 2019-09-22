@@ -1,0 +1,94 @@
+import React from 'react';
+import Plot from 'react-plotly.js';
+
+
+class Chart extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			data: [
+				{
+					x: JSON.parse(localStorage.getItem('CSV_x')),
+					y: JSON.parse(localStorage.getItem('CSV_y')),
+					z: JSON.parse(localStorage.getItem('CSV_z')),
+					mode: 'markers',
+					type: 'scatter3d',
+					marker: {
+						color: '#000',
+						size: 2,
+					},
+				},
+				{
+					alphahull: 7,
+					opacity: 0.1,
+					type: 'mesh3d',
+					x: JSON.parse(localStorage.getItem('CSV_x')),
+					y: JSON.parse(localStorage.getItem('CSV_y')),
+					z: JSON.parse(localStorage.getItem('CSV_z')),
+				},
+			],
+			layout: {
+				autosize: true,
+				title: 'Схема',
+				width: 700,
+				height: 700,
+				scene: {
+					aspectratio: {
+						x: 1,
+						y: 1,
+						z: 1,
+					},
+					camera: {
+						center: {
+							x: 0,
+							y: 0,
+							z: 0,
+						},
+						eye: {
+							x: 1.25,
+							y: 1.25,
+							z: 1.25,
+						},
+						up: {
+							x: 0,
+							y: 0,
+							z: 1,
+						},
+					},
+					xaxis: {
+						type: 'linear',
+						zeroline: false,
+					},
+					yaxis: {
+						type: 'linear',
+						zeroline: false,
+					},
+					zaxis: {
+						type: 'linear',
+						zeroline: false,
+					},
+				},
+			},
+		};
+	}
+
+	// componentWillMount() {
+		// JSON.parse(localStorage.getItem('CSV_x'));
+		// JSON.parse(localStorage.getItem('CSV_y'));
+		// JSON.parse(localStorage.getItem('CSV_z'));
+	// }
+
+	render() {
+		const { data, layout } = this.state;
+		return (
+			<div>
+				<Plot
+					data={data}
+					layout={layout}
+				/>
+			</div>
+		);
+	}
+}
+
+export default Chart;
