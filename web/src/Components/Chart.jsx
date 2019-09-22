@@ -79,12 +79,11 @@ class Chart extends React.Component {
 					},
 				},
 			},
-			value: '123',
 		};
 	}
 
 	render() {
-		const { data, layout, value } = this.state;
+		const { data, layout } = this.state;
 		return (
 			<div className="module">
 				<Plot
@@ -93,8 +92,18 @@ class Chart extends React.Component {
 				/>
 				<div className="value_block">
 					<div className="gradient gradient_hot">
-						VALUE =
-						{` ${value}`}
+						Скважины №
+						{JSON.parse(localStorage.getItem('similar')).map((item) => (
+							<span key={item}>{`${item}, `}</span>
+						))}
+						 наиболее выгодны для добычи
+					</div>
+					<div className="gradient gradient_cold">
+						Скважины № 
+						{JSON.parse(localStorage.getItem('huevye')).map((item) => (
+							<span key={item}>{`${item}, `}</span>
+						))}
+						 требуют дополнительных замеров
 					</div>
 				</div>
 			</div>
