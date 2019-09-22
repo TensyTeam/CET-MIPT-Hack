@@ -4,3 +4,4 @@ data/
 *.txt
 
 txt2csv.py
+# .ipynb_checkpoints/
