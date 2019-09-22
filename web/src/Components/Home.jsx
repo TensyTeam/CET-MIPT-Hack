@@ -26,12 +26,17 @@ class Home extends React.Component {
 
 	render() {
 		return (
-			<div>
+			<div className="inputBtn">
 				<CsvParse
 					keys={['X', 'Y', 'Z']}
 					onDataUploaded={this.handleData}
 					onError={this.handleError}
-					render={(onChange) => <input type="file" onChange={onChange} />}
+					render={(onChange) => (
+						<label className="btn btn-file" htmlFor="cover">
+							<input type="file" id="cover" accept="file/csv" className="input-file" onChange={onChange} />
+							<span>Upload CSV</span>
+						</label>
+					)}
 				/>
 			</div>
 		);

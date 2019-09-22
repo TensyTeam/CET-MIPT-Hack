@@ -15,12 +15,13 @@ class Chart extends React.Component {
 					type: 'scatter3d',
 					marker: {
 						color: '#000',
-						size: 2,
+						size: 5,
 					},
 				},
 				{
-					alphahull: 7,
-					opacity: 0.1,
+					alphahull: 10,
+					opacity: 0.8,
+					color: '#dadada',
 					type: 'mesh3d',
 					x: JSON.parse(localStorage.getItem('CSV_x')),
 					y: JSON.parse(localStorage.getItem('CSV_y')),
@@ -30,8 +31,8 @@ class Chart extends React.Component {
 			layout: {
 				autosize: true,
 				title: 'Схема',
-				width: 700,
-				height: 700,
+				width: 788,
+				height: 788,
 				scene: {
 					aspectratio: {
 						x: 1,
