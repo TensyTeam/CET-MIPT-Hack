@@ -1,22 +1,20 @@
 {
-  "name": "sample-react-app",
+  "name": "govno",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@vtex/react-csv-parse": "^3.0.2",
     "axios": "^0.18.1",
-    "eslint-config-react-app": "^5.0.1",
     "jquery": "^3.4.1",
     "plotly.js": "^1.49.5",
     "react": "^16.9.0",
-    "react-chartjs-2": "^2.8.0",
     "react-dom": "^16.9.0",
     "react-plotly.js": "^2.3.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "2.1.5"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "PORT=3050 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -29,13 +27,5 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ],
-  "devDependencies": {
-    "eslint": "^5.12.0",
-    "eslint-config-airbnb": "^18.0.1",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.14.3",
-    "eslint-plugin-react-hooks": "^1.7.0"
-  }
+  ]
 }

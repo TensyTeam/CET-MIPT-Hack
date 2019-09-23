@@ -1,6 +1,6 @@
-data/
+# data/
 
-*.csv
+# *.csv
 *.txt
 
 txt2csv.py
